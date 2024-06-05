@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Singh</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: url('360_F_216473351_FCLq1pZQOBFrgcyPBphKvBd8Z5wjD1dI.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(15, 36, 119, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #28a745;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background: #218838;
+        }
+        .nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="home">
+        <h1>Welcome to Our Website</h1>
+        <div class="nav">
+            <a href="#" onclick="showHome()">Home</a>
+            <a href="#" onclick="showLogin()">Login</a>
+            <a href="#" onclick="showSignup()">Signup</a>
+            <a href="#" onclick="showContact()">Contact</a>
+        </div>
+    </div>
+
+    <div class="container" id="login" style="display: none;">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div class="container" id="signup" style="display: none;">
+        <h2>Signup</h2>
+        <div class="form-group">
+            <label for="signup-name">Name</label>
+            <input type="text" id="signup-name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <button onclick="signup()">Signup</button>
+        </div>
+    </div>
+
+    <div class="container" id="contact" style="display: none;">
+        <h2>Contact Us</h2>
+        <p>Email: ayushrajput8924@gmail.com</p>
+        <p>Phone: 8924042544</p>
+    </div>
+
+    <script>
+        function showHome() {
+            document.getElementById('home').style.display = 'block';
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('signup').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+        }
+
+        function showLogin() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('login').style.display = 'block';
+            document.getElementById('signup').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+        }
+
+        function showSignup() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('signup').style.display = 'block';
+            document.getElementById('contact').style.display = 'none';
+        }
+
+        function showContact() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('signup').style.display = 'none';
+            document.getElementById('contact').style.display = 'block';
+        }
+
+        function login() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            alert(`Logging in with email: ${email}`);
+        }
+
+        function signup() {
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            alert(`Signing up with name: ${name}, email: ${email}`);
+        }
+    </script>
+</body>
+</html>
